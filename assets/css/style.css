@@ -1,0 +1,117 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2? family= Boucher & display=swap');
+
+
+/* VARIABLE CSS */
+:root {
+    --header-height: 3.5rem;
+    
+    /* COULEURS */
+    /* hsl : basé sur la Teinte (H), la Saturation (S), la Lumière (L). SOURCE: https://iamvdo.me/blog/les-avantages-de-hsl-par-rapport-a-rgb*/
+    --first-color: hsl(22,72%,52%);
+    --first-color-alt: hsl(22,72%,46%);
+    --white-color: #fff;
+    --text-color: hsl(22,4%,75%);
+    --text-color-light: hsl(22,4%,55%);
+    --body-color: hsl(22,8%,6%);
+    --container-color: hsl(22,8%,7%);
+    
+    /* TYPOGRAPHIE */
+    --body-font: 'Poppins', sans-serif;
+    --second-font: 'Butcherman', cursive;
+    
+    /* FONT-SIZE */
+    --biggest-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+    
+    /* FONT WEIGHT */
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /* Z-INDEX */
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+
+
+/* RESPONSIVE */
+@media screen and (min-width: 1024px) {
+    :root {
+        --biggest-font-size: 3.5rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: 0.875rem;
+        --smaller-font-size: 0.813rem;
+    }
+}
+
+
+/* UNIVERSAL RULES */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    /* adoucit le mouvement entre deux scrolls */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--white-color);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* CLASSES */
+.container {
+    max-width: 1024px;
+    margin-inline: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.section-title {
+    font-size: var(--h1-font-size);
+    font-family: var(--second-font);
+    /* définit l'épaisseur du texte */
+    font-weight: initial;
+    /* définit la distance entre deux lignes de textes */
+    line-height: 130%;
+    color: var(--first-color);
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.main {
+    overflow: hidden;
+}
+
