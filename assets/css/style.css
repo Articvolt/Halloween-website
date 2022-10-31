@@ -124,6 +124,25 @@ img {
     opacity: .5;
 }
 
+.shape__small,
+.shape__big {
+    position: absolute;
+    background-color: var(--first-color);
+    border-radius: 50%; 
+    filter: blur(96px);
+    z-index: -1;
+}
+
+.shape__small {
+    width: 150px;
+    height: 150px;
+}
+
+.shape__big {
+    width: 250px;
+    height: 250px;
+    opacity: .8;
+}
 
 /*========================= CLASS HEADER & NAV =================================*/
 
@@ -270,7 +289,7 @@ img {
     bottom: 2.75rem;
     right: -1.5rem;
     transform: rotate(15deg);
-    animation: animate-star-1 5s infinite ease-in-out;
+    animation: animate-star-2 5s infinite ease-in-out;
 
 }
 
@@ -329,6 +348,18 @@ img {
         opacity: 1;
     }
 }
+
+.home .shape__small {
+    top: -3rem;
+    left: -3rem;
+}
+
+.home .shape__big {
+    bottom: 5rem;
+    right: -10rem;
+}
+
+
 
 /*====================== BUTTON ==================================*/
 .button {
