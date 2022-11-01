@@ -1,4 +1,4 @@
-//==============================SHOW MENU=============================
+//============================== SHOW MENU =============================
 
 // définition des constantes à appelées
 const navMenu = document.getElementById('nav-menu'),
@@ -19,7 +19,7 @@ if(navClose) {
     })
 }
 
-//========================REMOVE MENU MOBILE==========================
+//======================== REMOVE MENU MOBILE ==========================
 
 //déclaration de la constante
 const navLink = document.querySelectorAll('.nav__link')
@@ -32,7 +32,7 @@ const linkAction = () =>{
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 
-//=================================CHANGE BACKGROUND HEADER=================
+//================================= CHANGE BACKGROUND HEADER =================
 
 const scrollHeader = () =>{
     const header = document.getElementById('header')
@@ -41,3 +41,25 @@ const scrollHeader = () =>{
                        : header.classList.remove('bg-header')
 }
 window.addEventListener('scroll', scrollHeader)
+
+//=========================== SCROLL SECTION ACTIVE LINK ==============================
+
+const sections = document.querySelectorAll('section[id]')
+
+const scrollActive = () =>{
+    const scrollY = window.scrollX
+
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight,
+                    sectionTop = current.offsetTop - 58,
+                    sectionId = current.getAttribute('id'),
+                    sectionClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+
+        if(scrollY > sectionTop && scrollY <= sectionTop +sectionHeight) {
+            sectionClass.classList.add('active-link')
+        } else {
+            sectionClass.classList.remove('active-link')
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive)
