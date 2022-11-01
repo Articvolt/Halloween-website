@@ -1,4 +1,4 @@
-// SHOW MENU
+//==============================SHOW MENU=============================
 
 // définition des constantes à appelées
 const navMenu = document.getElementById('nav-menu'),
@@ -19,7 +19,7 @@ if(navClose) {
     })
 }
 
-//REMOVE MENU
+//========================REMOVE MENU MOBILE==========================
 
 //déclaration de la constante
 const navLink = document.querySelectorAll('.nav__link')
@@ -32,12 +32,12 @@ const linkAction = () =>{
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 
-// CHANGE BACKGROUND HEADER
+//=================================CHANGE BACKGROUND HEADER=================
 
-const scrollHeader = () => {
+const scrollHeader = () =>{
     const header = document.getElementById('header')
     // au dessus de 50 viewpot height
     this.scrollY >= 50 ? header.classList.add('bg-header')
-                        :header.classList.remove('bg-header')
+                       : header.classList.remove('bg-header')
 }
 window.addEventListener('scroll', scrollHeader)
