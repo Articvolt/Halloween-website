@@ -254,6 +254,12 @@ img {
     box-shadow: 0 4px 8px hsla(22, 10%, 2%, .4);
 }
 
+/* active link */
+.active-link {
+    color: var(--first-color);
+}
+
+
 /*==================== HOME SECTION ===============================*/
 
 .home {
