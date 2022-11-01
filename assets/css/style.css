@@ -204,6 +204,7 @@ img {
         width: 100%;
         box-shadow: 0 4px 8px hsla(22, 10%, 2%, .5);
         padding-block: 3.5rem 3rem;
+        border-radius: 0 0 2rem 2rem;
         transition: top .4s;
     }
 }
