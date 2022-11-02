@@ -1058,7 +1058,7 @@
     }
 }
 
-@media screen and (mi-width: 1248px) {
+@media screen and (min-width: 1248px) {
     .home__tree-1,
     .home__tree-2 {
         width: 450px;
